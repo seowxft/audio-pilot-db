@@ -18,10 +18,9 @@ def create_pilot_data(user_id):
     audio_pilot.playNum = str(content['playNum'])
     audio_pilot.averRating = str(content['averRating'])
     audio_pilot.arouRating = str(content['arouRating'])
-    audio_pilot.domRating = str(content['domRating'])
     audio_pilot.averRatingDef = str(content['averRatingDef'])
     audio_pilot.arouRatingDef = str(content['arouRatingDef'])
-    audio_pilot.domRatingDef = str(content['domRatingDef'])
+
 
     BaseObject.check_and_save(audio_pilot)
     result = dict({"success": "yes"})

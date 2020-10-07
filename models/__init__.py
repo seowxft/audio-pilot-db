@@ -6,7 +6,7 @@ from models.base_object import BaseObject
 from models.HeadphoneCheck import HeadphoneCheck
 from models.AudioFreq import AudioFreq
 from models.AudioPilot import AudioPilot
-
+from models.PsychQuiz import PsychQuiz
 
 __all__ = (
     'ApiErrors',
@@ -14,5 +14,6 @@ __all__ = (
     'HeadphoneCheck',
     'AudioFreq',
     'AudioPilot',
+    'PsychQuiz',
 
 )

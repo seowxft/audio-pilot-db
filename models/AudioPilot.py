@@ -20,10 +20,8 @@ class AudioPilot(BaseObject, Model):
     playNum              = Column(Text(length=10000))
     averRating           = Column(Text(length=10000))
     arouRating           = Column(Text(length=10000))
-    domRating            = Column(Text(length=10000))
     averRatingDef        = Column(Text(length=10000))
     arouRatingDef        = Column(Text(length=10000))
-    domRatingDef         = Column(Text(length=10000))
 
 
     def get_id(self):
@@ -62,17 +60,11 @@ class AudioPilot(BaseObject, Model):
     def get_arou(self):
         return str(self.arouRating)
 
-    def get_dom(self):
-        return str(self.domRating)
-
     def get_aver_def(self):
         return str(self.averRatingDef)
 
     def get_arou_def(self):
         return str(self.arouRatingDef)
-
-    def get_dom_def(self):
-        return str(self.domRatingDef)
 
     def errors(self):
         errors = super(AudioPilot, self).errors()
