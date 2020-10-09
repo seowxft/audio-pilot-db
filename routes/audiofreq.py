@@ -11,7 +11,8 @@ def create_freq_data(user_id):
     audio_freq.qnTime = str(content['qnTime'])
     audio_freq.qnRT = str(content['qnRT'])
     audio_freq.qnNum = str(content['qnNum'])
-    audio_freq.adjvol = str(content['adjvol'])
+    audio_freq.volume = str(content['volume'])
+    audio_freq.volumeNotLog = str(content['volumeNotLog'])
     audio_freq.freqThresIndiv = str(content['freqThresIndiv'])
     audio_freq.sliderFreqDefault = str(content['sliderFreqDefault'])
 

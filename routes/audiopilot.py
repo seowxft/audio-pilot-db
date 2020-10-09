@@ -15,6 +15,8 @@ def create_pilot_data(user_id):
     audio_pilot.soundFocus = str(content['soundFocus'])
     audio_pilot.freqFocus = str(content['freqFocus'])
     audio_pilot.volume = str(content['volume'])
+    audio_pilot.volumePer = str(content['volumePer'])
+    audio_pilot.checkBox = str(content['checkBox'])
     audio_pilot.playNum = str(content['playNum'])
     audio_pilot.averRating = str(content['averRating'])
     audio_pilot.arouRating = str(content['arouRating'])

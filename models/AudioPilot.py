@@ -17,6 +17,8 @@ class AudioPilot(BaseObject, Model):
     soundFocus           = Column(Text(length=10000))
     freqFocus            = Column(Text(length=10000))
     volume               = Column(Text(length=10000))
+    volumePer            = Column(Text(length=10000))
+    checkBox             = Column(Text(length=10000))
     playNum              = Column(Text(length=10000))
     averRating           = Column(Text(length=10000))
     arouRating           = Column(Text(length=10000))
@@ -50,6 +52,12 @@ class AudioPilot(BaseObject, Model):
 
     def get_volume(self):
         return str(self.volume)
+
+    def get_volume_per(self):
+        return str(self.volumePer)
+
+    def get_checkbox(self):
+        return str(self.checkBox)
 
     def get_playNum(self):
         return str(self.playNum)
