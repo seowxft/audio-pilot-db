@@ -8,9 +8,11 @@ def create_freq_data(user_id):
     content = request.json
     audio_freq = AudioFreq()
     audio_freq.userID = str(content['userID'])
+    audio_freq.date = str(content['date'])
+    audio_freq.startTime = str(content['startTime'])
+    audio_freq.qnNum = str(content['qnNum'])   
     audio_freq.qnTime = str(content['qnTime'])
     audio_freq.qnRT = str(content['qnRT'])
-    audio_freq.qnNum = str(content['qnNum'])
     audio_freq.volume = str(content['volume'])
     audio_freq.volumeNotLog = str(content['volumeNotLog'])
     audio_freq.freqThresIndiv = str(content['freqThresIndiv'])

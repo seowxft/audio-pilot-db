@@ -8,6 +8,8 @@ def create_headphone_data(user_id):
     content = request.json
     headphone_check = HeadphoneCheck()
     headphone_check.userID = str(content['userID'])
+    headphone_check.date = str(content['date'])
+    headphone_check.startTime = str(content['startTime'])
     headphone_check.checkTry = str(content['checkTry'])
     headphone_check.checkStage = str(content['checkStage'])
     headphone_check.volume = str(content['volume'])

@@ -10,6 +10,8 @@ class PsychQuiz(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID           = Column(Text(length=10000))
+    date              = Column(Text(length=10000))
+    startTime                = Column(Text(length=10000))
     qnTimeStart      = Column(Text(length=10000))
     qnTimeEnd        = Column(Text(length=10000))
     PgFinish_OCIR    = Column(Text(length=10000))
@@ -29,6 +31,12 @@ class PsychQuiz(BaseObject, Model):
     def get_user_id(self):
         return str(self.userID)
 
+    def get_date(self):
+        return str(self.date)
+
+    def get_start_time(self):
+        return str(self.startTime)
+        
     def get_qn_start(self):
         return str(self.qnTimeStart)
 

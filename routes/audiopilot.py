@@ -8,9 +8,11 @@ def create_pilot_data(user_id):
     content = request.json
     audio_pilot = AudioPilot()
     audio_pilot.userID = str(content['userID'])
+    audio_pilot.date = str(content['date'])
+    audio_pilot.startTime = str(content['startTime'])
+    audio_pilot.qnNum = str(content['qnNum'])
     audio_pilot.qnTime = str(content['qnTime'])
     audio_pilot.qnRT = str(content['qnRT'])
-    audio_pilot.qnNum = str(content['qnNum'])
     audio_pilot.soundIndex = str(content['soundIndex'])
     audio_pilot.soundFocus = str(content['soundFocus'])
     audio_pilot.freqFocus = str(content['freqFocus'])

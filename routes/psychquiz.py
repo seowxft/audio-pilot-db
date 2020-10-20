@@ -8,6 +8,8 @@ def create_psych_data(user_id):
     content = request.json
     psych_quiz = PsychQuiz()
     psych_quiz.userID = str(content['userID'])
+    psych_quiz.date = str(content['date'])
+    psych_quiz.startTime = str(content['startTime'])
     psych_quiz.qnTimeStart = str(content['qnTimeStart'])
     psych_quiz.qnTimeEnd = str(content['qnTimeEnd'])
     psych_quiz.PgFinish_OCIR = str(content['PgFinish_OCIR'])
