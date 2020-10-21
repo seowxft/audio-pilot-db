@@ -10,16 +10,20 @@ class PsychQuiz(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID           = Column(Text(length=10000))
-    date              = Column(Text(length=10000))
-    startTime                = Column(Text(length=10000))
+    date             = Column(Text(length=10000))
+    startTime        = Column(Text(length=10000))
     qnTimeStart      = Column(Text(length=10000))
     qnTimeEnd        = Column(Text(length=10000))
+    PgFinish_demo    = Column(Text(length=10000))
     PgFinish_OCIR    = Column(Text(length=10000))
     PgFinish_STAI_Y1  = Column(Text(length=10000))
     PgFinish_STAI_Y2  = Column(Text(length=10000))
+    PgRT_demo        = Column(Text(length=10000))
     PgRT_OCIR        = Column(Text(length=10000))
     PgRT_STAI_Y1     = Column(Text(length=10000))
     PgRT_STAI_Y2     = Column(Text(length=10000))
+    age              = Column(Text(length=10000))
+    gender           = Column(Text(length=10000))
     OCIR             = Column(Text(length=10000))
     STAI_Y1          = Column(Text(length=10000))
     STAI_Y2          = Column(Text(length=10000))
@@ -36,12 +40,15 @@ class PsychQuiz(BaseObject, Model):
 
     def get_start_time(self):
         return str(self.startTime)
-        
+
     def get_qn_start(self):
         return str(self.qnTimeStart)
 
     def get_qn_end(self):
         return str(self.qnTimeEnd)
+
+    def get_pg0_finish(self):
+        return str(self.PgFinish_demo)
 
     def get_pg1_finish(self):
         return str(self.PgFinish_OCIR)
@@ -52,6 +59,9 @@ class PsychQuiz(BaseObject, Model):
     def get_p3_finish(self):
         return str(self.PgFinish_STAI_Y2)
 
+    def get_pg0_rt(self):
+        return str(self.PgRT_demo)
+
     def get_pg1_rt(self):
         return str(self.PgRT_OCIR)
 
@@ -59,7 +69,13 @@ class PsychQuiz(BaseObject, Model):
         return str(self.PgRT_STAI_Y1)
 
     def get_pg3_rt(self):
-        return str(self.STAI_Y2)
+        return str(self.PgRT_STAI_Y2)
+
+    def get_age(self):
+        return str(self.age)
+
+    def get_gender(self):
+        return str(self.gender)
 
     def get_ocir(self):
         return str(self.OCIR)
