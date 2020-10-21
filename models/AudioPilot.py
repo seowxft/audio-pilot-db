@@ -10,9 +10,9 @@ class AudioPilot(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID               = Column(Text(length=10000))
+    date                 = Column(Text(length=10000))
+    startTime            = Column(Text(length=10000))
     qnNum                = Column(Text(length=10000))
-    date              = Column(Text(length=10000))
-    startTime                = Column(Text(length=10000))
     qnTime               = Column(Text(length=10000))
     qnRT                 = Column(Text(length=10000))
     soundIndex           = Column(Text(length=10000))
